@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Reset and Submit js</title>
+</head>
+
+<body><script type="text/javascript">
+	function sendme(){
+		alert("Are you sure to submit this form");
+	}
+	function fclear(){
+		alert("Are you sure to clear this form");
+	}
+	</script>
+	<form onSubmit="sendme()" onReset="fclear()">
+	First Name:<input type="text"><br>
+		Second Name:<input type="text"><br>
+		<input type="submit" value="Send">
+		<input type="reset" value="Clear">
+	</form>
+</body>
+</html>

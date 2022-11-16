@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>on mouse move</title>
+<style>
+	div{
+		width: 250px;
+		height: 500px;
+		border: 2px solid;
+	}
+	</style>
+	</head>
+
+<body><script type="text/javascript">
+		function move(a){
+			
+			var x=a.clientX;
+			var y=a.clientY;
+			var z="Coordinates : ("+x+","+y+")";
+			document.getElementById("abc").innerHTML=z;
+		}
+	</script>
+	<div id="abc" onMouseMove="move(event)">AHSAN</div>
+</body>
+</html>

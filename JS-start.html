@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JAVASCRIPT</title>
+</head>
+<body>
+	<script type="text/javascript">
+	/*	var x=20;
+		var y=10;
+		document.write("<h1>Arithmatic Operators</h1>")
+		document.write("Sum of number are=")
+		z=x+y;
+		document.write(z)
+		document.write("<br>")
+		document.write("<h1>Comparison Operators</h1>")
+		z=(x==y);
+		document.write("<br>")
+		document.write("x==y =>")
+		document.write(z)
+		z=(x>y);
+		document.write("<br>")
+		document.write("x>y =>")
+		document.write(z)
+		z=(x<y);
+		document.write("<br>")
+		document.write("x< y =>")
+		document.write(z)   */
+		
+	/*	var x="My Name is "
+		var y="Ahsan Roman"
+		document.write("<h1>String Operator</h1>")
+		document.write("<br>")
+		document.write(x+y)*/
+	
+	/*	// function name
+		function CalculateArea(width,height)
+		{
+			area=width * height
+			return area;
+		}
+		document.write("<h1>Functions</h1>")
+		document.write(CalculateArea(10,3))*/		
+		// function on click
+	function calculateArea(x,y)
+		{
+			area=x*y
+			return area;
+		}
+
+	</script>
+	<form>
+	<input type="button" name="submit" value="Calculate Area" onClick="alert(calculateArea(10,5))">
+	</form><br>
+	<form name="form" action=""> <!--action is empty because we uses this page for action-->
+		WIDTH:<input type="text" name="width">
+		HEIGHT:<input type="text" name="height">
+		<input type="button" name="submmit" value="Calculate Area" onClick="alert(calculateArea(document.form.width.value,document.form.height.value))">	
+	</form>
+</body>
+</html>

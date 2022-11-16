@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ECG EX</title>
+</head>
+
+<body><script type="text/javascript">
+	
+dataLength = 0;
+
+if (dataLength !== result.length); {
+  for (var i = dataLength; i < result.length; i++) 
+        {
+            data.push({
+                x: parseInt(result[i].valorx),
+                y: parseFloat(result[i].valory)
+            });
+           if (data.length > result.length) {
+           data.shift()}
+        }
+        dataLength = result.length;
+        chart.render();
+    }
+  
+	</script>
+</body>
+</html>

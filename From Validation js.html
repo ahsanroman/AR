@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Form Validation</title>
+	<script>
+	function validate(){
+		var username=document.forms["register"]["UN"].value;
+		var key1=document.forms["register"]["pass1"].value;
+		var key2=document.forms["register"]["pass2"].value;
+		if(username==""|| username.length<4){
+			alert("User name should not be empty and should not be less than 4 characters");
+			return false;
+		}
+		if(key1==""){
+			alert("Password should not be empty");
+			return false;
+		}
+		if(key2==""){
+			alert("Confirm Password should not be empty");
+			return false;
+		}
+		if(key1!=key2){
+			alert("Password didn't match.!");
+		}
+	}
+	</script>
+</head>
+
+<body>
+	<form name="register" onSubmit="validate()" method="post" action="login.php">
+	<label>User Name:</label>
+		<input type="text" name="UN" size="20">
+		<br><br>
+		<label>Password:</label>
+		<input type="password" name="pass1" size="20">
+		<br><br>
+		<label>Confirm Password:</label>
+		<input type="password" name="pass2">
+		<br>
+	
+		
+		<input type="submit" value="submit">
+	</form>
+</body>
+</html>

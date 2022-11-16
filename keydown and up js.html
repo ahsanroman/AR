@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>key press and up</title>
+</head>
+
+<body><h1>on key press & UP & Uppercase() &  press(event) for UniCode</h1><script type="text/javascript">
+	function down(){
+		alert("You have Pressed a Key");
+	}
+	function up(){
+		alert("Released");
+	}
+	function upp(){
+	
+		var x=document.getElementById("cap");
+		x.value=x.value.toUpperCase();
+	}	
+	function press(event){
+		var x = event.which || event.keyCode;   //some browsers define which and some keycode
+		document.getElementById("unicode").innerHTML="The Unicode is:"+x;
+	}
+	</script>
+	<input type="text" size="30" onKeyDown="down()">
+	<input type="text" size="30" onKeyUp="up()"> 
+	<input type="text" id="cap" size="30" onKeyUp="upp()"> 
+	<input type="text" size="30" onKeyPress="press(event)"> 
+	<p id="unicode"></p>
+</body>	
+</html>
